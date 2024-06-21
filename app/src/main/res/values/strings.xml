@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Proyecto_App_Medica</string>
+    <string name="d_nde_quieres_recibir_tu_pedido">¿Dónde quieres recibir tu pedido?</string>
+    <string name="menu">Menu</string>
+    <string name="Buscador_name">Buscar medicamentos</string>
+    <string name="inicio">Inicio</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="mis_pedidos">Mis pedidos</string>
+    <string name="perfil">Perfil</string>
+    <string name="pregunta_pedido">¿Dónde quieres recibir tu pedido?</string>
 </resources>
