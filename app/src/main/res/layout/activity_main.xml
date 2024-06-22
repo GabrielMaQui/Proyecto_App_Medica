@@ -43,6 +43,7 @@
         android:textSize="17dp"
         android:paddingLeft="15dp"
         android:textColor="#8B8888"
+        android:textStyle="bold"
         android:background="@drawable/rectangle_2"/>
 
     <EditText
@@ -57,30 +58,52 @@
         android:textSize="17dp"
         android:paddingLeft="15dp"
         android:textColor="#8B8888"
+        android:textStyle="bold"
         android:background="@drawable/rectangle_2"/>
 
-    <TextView
-        android:id="@+id/no_tienes_u"
-        android:layout_width="280dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="34dp"
+    <LinearLayout
+        android:id="@+id/ll_pregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/et_contra"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="No tienes una cuenta?, Registrate"
-        android:gravity="top"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:layout_margin="10sp"
-        />
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_crear_cuenta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="sans-serif-medium"
+            android:text="No tienes una cuenta?, "
+            android:textSize="18dp"
+            android:textColor="#FFFFFF"
+            />
+
+        <TextView
+            android:id="@+id/tv_registrate"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_crear_cuenta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="sans-serif-medium"
+            android:text="Registrate"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#8D0FB9"
+            />
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_iniciar_sesion"
         android:layout_width="255dp"
         android:layout_height="46dp"
         android:text="Iniciar Sesión"
-        app:layout_constraintTop_toBottomOf="@+id/no_tienes_u"
+        app:layout_constraintTop_toBottomOf="@+id/ll_pregunta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textStyle="bold"
