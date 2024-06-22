@@ -1,97 +1,113 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#00CFCF"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/menuButton"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
+    <ImageView
+        android:id="@+id/some_id"
+        android:layout_width="38dp"
+        android:layout_height="36dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="17dp"
         android:src="@drawable/ic_menu"
-        android:contentDescription="Menu" />
+        android:gravity="center_horizontal|top"
+        />
 
     <EditText
-        android:id="@+id/searchEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/menuButton"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_alignParentEnd="true"
-        android:hint="Buscar medicamentos"
-        android:padding="8dp"
+        android:id="@+id/et_buscarMedicamentos"
+        android:layout_width="330dp"
+        android:layout_height="36dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="40dp"
+        android:paddingLeft="10dp"
+        android:textAlignment="center"
+        android:background="@drawable/rectangle_2"
         android:drawableStart="@drawable/ic_search"
-        android:drawablePadding="8dp"
-        android:background="@android:color/white" />
-
-    <TextView
-        android:id="@+id/appTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medi App"
-        android:textSize="70dp"
-        android:textColor="#000"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hola Usuario,\nBienvenido"
-        android:textSize="50sp"
-        android:textColor="#000"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/appTitle"
-        android:layout_marginTop="25dp"
-        android:textAlignment="center" />
-
-    <Button
-        android:id="@+id/locationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/d_nde_quieres_recibir_tu_pedido"
-        android:backgroundTint="#D3D3D3"
-        android:textColor="#000000"
         android:textStyle="bold"
-        android:layout_below="@id/welcomeText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:drawableLeft="@drawable/ic_location"
+        android:textSize="17sp"
+        android:paddingRight="100dp"
+        android:hint="Buscar medicamentos"
+        />
 
-        android:padding="10dp" />
 
-    <Button
-        android:id="@+id/useCurrentLocation"
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_buscarMedicamentos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/hola_usuari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/locationButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/hola_usuari"
+        android:textAppearance="@style/hola_usuari"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/btn_donde_quieres_tu_Pedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/hola_usuari"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#D3D3D3"
+        android:elevation="4dp"
+        android:textColor="#5A5151"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:text="¿Donde quieres recibir tu pedido?"
+        android:drawableLeft="@drawable/ic_location"/>
+
+    <Button
+        android:id="@+id/btn_usar_mi_ubicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_donde_quieres_tu_Pedido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Usar mi ubicacion actual"
         android:drawableLeft="@drawable/ic_location_p"
-        android:text="Usar mi ubicación actual"
         android:textColor="#844FE3"
+        android:gravity="top"
         android:backgroundTint="#00CFCF"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"/>
 
     <Button
-        android:id="@+id/viewProductsButton"
+        android:id="@+id/btn_ver_productos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_usar_mi_ubicacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:text="Ver Productos"
-        android:layout_below="@id/useCurrentLocation"
+        android:textSize="22dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#069BEA"
-        android:textColor="#FFF" />
+        android:backgroundTint="#39B55C"
+        android:gravity="top"
+        android:textColor="#FFF"/>
 
     <LinearLayout
         android:id="@+id/bottomNavigation"
@@ -99,6 +115,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#D3D3D3"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_alignParentBottom="true"
         android:weightSum="4">
 
@@ -108,7 +125,7 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:id="@+id/homeButton"
+                android:id="@+id/btn_home"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -123,7 +140,7 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:id="@+id/favoritesButton"
+                android:id="@+id/btn_favorites"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -138,7 +155,7 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:id="@+id/ordersButton"
+                android:id="@+id/btn_orders"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -153,7 +170,7 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:id="@+id/profileButton"
+                android:id="@+id/btn_perfil"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -163,7 +180,7 @@
         </FrameLayout>
 
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

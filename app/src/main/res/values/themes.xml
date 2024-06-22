@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.Proyecto_App_Medica" parent="Base.Theme.Proyecto_App_Medica" />
+    <style name="hola_usuari">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="categor_as">
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">#025061</item>
+    </style>
 </resources>

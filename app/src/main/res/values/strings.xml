@@ -11,4 +11,6 @@
     <string name="medic_app">
 Medic \n     App
 </string>
+    <string name="hola_usuari">Hola Usuario,\n  Bienvenido</string>
+
 </resources>
