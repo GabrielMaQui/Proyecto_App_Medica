@@ -25,7 +25,7 @@
             android:id="@+id/iv_imagen_Producto"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/imgProducto"/>
+            android:src="@drawable/imgproducto"/>
 
         <LinearLayout
             android:layout_height="match_parent"

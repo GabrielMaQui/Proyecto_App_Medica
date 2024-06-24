@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00CFCF"
-        android:text="< Volver"
+        android:text="Volver"
         android:textSize="25dp"
         android:fontFamily="sans-serif-medium"
         android:textStyle="bold"

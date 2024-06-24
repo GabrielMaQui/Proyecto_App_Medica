@@ -82,7 +82,7 @@
                     android:layout_height="160dp"
                     android:layout_marginLeft="15dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/imgAseopersonal" />
+                    android:src="@drawable/img_aseopersonal" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -109,7 +109,7 @@
                     android:layout_height="160dp"
                     android:layout_marginLeft="15dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/imgMedicamentos" />
+                    android:src="@drawable/img_medicamentos" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -174,7 +174,7 @@
                     android:layout_height="160dp"
                     android:layout_marginLeft="15dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/imgProductosMaternos" />
+                    android:src="@drawable/img_productos_maternos" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -211,7 +211,7 @@
                     android:layout_height="160dp"
                     android:layout_marginLeft="15dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/imgPrimerosAuxilios" />
+                    android:src="@drawable/imgprimerosauxilios" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -239,7 +239,7 @@
                     android:layout_height="160dp"
                     android:layout_marginLeft="15dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/imgNutricion" />
+                    android:src="@drawable/imgnutricion" />
 
                 <TextView
                     android:layout_width="wrap_content"
