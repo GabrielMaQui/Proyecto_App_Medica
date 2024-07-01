@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00CFCF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/medi_app"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/inter_extrabold"
+        android:gravity="center_horizontal|top"
+        android:lineHeight="21sp"
+        android:text="@string/medi_app"
+        android:textAppearance="@style/medi_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ic_cancel"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/ic_cancel"
+        android:contentDescription="@string/ic_cancel_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="17dp"/>
+
+    <ImageView
+        android:id="@+id/elipse"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/elipse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/u"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center_horizontal|top"
+        android:text="U"
+        android:textAppearance="@style/u"
+        app:layout_constraintBottom_toBottomOf="@id/elipse"
+        app:layout_constraintEnd_toEndOf="@id/elipse"
+        app:layout_constraintStart_toStartOf="@id/elipse"
+        app:layout_constraintTop_toTopOf="@id/elipse" />
+
+    <TextView
+        android:id="@+id/desp_hola_usuari"
+        android:layout_width="203dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/desp_hola_usuari"
+        android:textAppearance="@style/desp_hola_usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elipse" />
+
+    <RelativeLayout
+        android:id="@+id/realizar_pedido_layout"
+        android:layout_width="326dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desp_hola_usuari">
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Realizar Pedido"
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:contentDescription="@string/image_button_MenuDespegable"
+            android:src="@drawable/ic_ir" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mis_pedidos_layout"
+        android:layout_width="326dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/realizar_pedido_layout">
+
+        <TextView
+            android:id="@+id/mis_pedidos_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Mis Pedidos"
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/mis_pedidos_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:contentDescription="@string/image_button_MenuDespegable"
+            android:src="@drawable/ic_ir" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/informacion_cuenta_layout"
+        android:layout_width="326dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mis_pedidos_layout">
+
+        <TextView
+            android:id="@+id/informacion_cuenta_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Informacion de la cuenta"
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/informacion_cuenta_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:contentDescription="@string/image_button_MenuDespegable"
+            android:src="@drawable/ic_ir" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contactanos_layout"
+        android:layout_width="326dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informacion_cuenta_layout">
+
+        <TextView
+            android:id="@+id/contactanos_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Contactanos"
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/contactanos_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:contentDescription="@string/image_button_MenuDespegable"
+            android:src="@drawable/ic_ir" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ayuda_layout"
+        android:layout_width="326dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactanos_layout">
+
+        <TextView
+            android:id="@+id/ayuda_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Ayuda"
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/ayuda_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:contentDescription="@string/image_button_MenuDespegable"
+            android:src="@drawable/ic_ir" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/cerrar_sesion_layout"
+        android:layout_width="326dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ayuda_layout">
+
+        <TextView
+            android:id="@+id/cerrar_sesion_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Cerrar Sesion"
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/cerrar_sesion_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:contentDescription="@string/image_button_MenuDespegable"
+            android:src="@drawable/ic_ir" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
