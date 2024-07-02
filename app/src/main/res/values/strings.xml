@@ -8,10 +8,16 @@
     <string name="mis_pedidos">Mis pedidos</string>
     <string name="perfil">Perfil</string>
     <string name="pregunta_pedido">¿Dónde quieres recibir tu pedido?</string>
+
     <string name="medic_app">Medic \n     App</string>
     <string name="hola_usuari">Hola Usuario,\n  Bienvenido</string>
 
     <string name="some_id">\u2714</string>
     <string name="pedido_real">Pedido Realizado\n\nGracias por tu compra</string>
+
+    <string name="medi_app">Medic \n     App</string>
+    <string name="ic_cancel_desc">Cancel button</string>
+    <string name="desp_hola_usuari">Hola Usuario</string>
+    <string name="image_button_MenuDespegable">Ir</string>
 
 </resources>

@@ -11,7 +11,19 @@
             </handle>
           </Target>
         </DropdownSelection>
+<<<<<<< HEAD
         <DialogSelection />
+=======
+        <DialogSelection>
+          <targets>
+            <Target type="DEFAULT_BOOT">
+              <handle>
+                <DeviceId pluginId="PhysicalDevice" identifier="serial=RFCW315XP0Y" />
+              </handle>
+            </Target>
+          </targets>
+        </DialogSelection>
+>>>>>>> 3410e5776404689b6f1a49fa4307c92f49a17ff6
       </SelectionState>
     </selectionStates>
   </component>
