@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#00CFCF"
-    tools:context=".MainActivity">
+    android:id="@+id/main"
+    tools:context=".ListaProductosActivity">
 
     <ImageView
         android:id="@+id/some_id"
@@ -62,7 +63,8 @@
         app:layout_constraintStart_toStartOf="parent"
         />
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_listadoProductos"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@+id/btn_volver"

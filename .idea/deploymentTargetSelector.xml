@@ -2,28 +2,8 @@
 <project version="4">
   <component name="deploymentTargetSelector">
     <selectionStates>
-      <SelectionState runConfigName="app">
+      <SelectionState runConfigName="App">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-06-21T19:25:43.609776700Z">
-          <Target type="DEFAULT_BOOT">
-            <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Gabriel\.android\avd\S23_API_33.avd" />
-            </handle>
-          </Target>
-        </DropdownSelection>
-<<<<<<< HEAD
-        <DialogSelection />
-=======
-        <DialogSelection>
-          <targets>
-            <Target type="DEFAULT_BOOT">
-              <handle>
-                <DeviceId pluginId="PhysicalDevice" identifier="serial=RFCW315XP0Y" />
-              </handle>
-            </Target>
-          </targets>
-        </DialogSelection>
->>>>>>> 3410e5776404689b6f1a49fa4307c92f49a17ff6
       </SelectionState>
     </selectionStates>
   </component>
