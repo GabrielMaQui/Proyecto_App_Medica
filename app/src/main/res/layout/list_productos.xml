@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#00CFCF"
+    android:background="@drawable/confirmacio"
     android:id="@+id/main"
     tools:context=".ListaProductosActivity">
 
@@ -52,7 +52,7 @@
         android:id="@+id/btn_volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#00CFCF"
+        android:backgroundTint="#00000000"
         android:text="Volver"
         android:textSize="25dp"
         android:fontFamily="sans-serif-medium"

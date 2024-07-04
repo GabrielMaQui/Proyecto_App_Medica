@@ -19,5 +19,8 @@
     <string name="ic_cancel_desc">Cancel button</string>
     <string name="desp_hola_usuari">Hola Usuario</string>
     <string name="image_button_MenuDespegable">Ir</string>
+    <string name="equis">
+\u00ef\u0080\u008d
+</string>
 
 </resources>

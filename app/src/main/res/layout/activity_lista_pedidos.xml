@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/confirmacio"
     tools:context=".DetalleProducto">
     <!-- Toolbar con menú y logo -->
     <androidx.appcompat.widget.Toolbar
@@ -33,43 +34,49 @@
             android:contentDescription="Logo" />
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- Barra de búsqueda -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/search_bar"
+    <!-- Botón de retroceso -->
+    <LinearLayout
+        android:id="@+id/back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
-        android:layout_margin="16dp"
-        app:startIconDrawable="@drawable/ic_search">
+        android:orientation="horizontal"
+        >
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Volver"
+            android:src="@drawable/ic_back" />
+
+        <Button
+            android:id="@+id/btn_volver"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="       Buscar medicamentos" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:backgroundTint="#00000000"
+            android:text="Volver"
+            android:textSize="25dp"
 
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="bold"
+            android:textColor="#025061"
+            app:layout_constraintTop_toBottomOf="@+id/et_buscarMedicamentos"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
-    <!-- Botón de retroceso -->
-    <ImageButton
-        android:id="@+id/back_button"
-        android:layout_width="50dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/search_bar"
-        android:layout_marginTop="10dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Volver"
-        android:src="@drawable/ic_back" />
+    </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/search_bar"
+        android:layout_below="@+id/back"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="101dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/lista_background"
+        android:background="@drawable/rectangle_12"
         android:orientation="horizontal"
         android:padding="20dp"
         android:visibility="visible">
@@ -120,9 +127,11 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_ir" />
+            android:id="@+id/eliminarPedido"
+            android:layout_width="28dp"
+            android:layout_height="36sp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/eliminarimagen" />
 
     </LinearLayout>
 

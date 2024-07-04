@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cibertec.proyecto_app_medica.Adapters.ProductoAdapter
 import com.cibertec.proyecto_app_medica.Entidades.Producto
+import com.google.ai.client.generativeai.type.content
 
 class ListaProductosActivity: AppCompatActivity() {
 
@@ -35,8 +36,8 @@ class ListaProductosActivity: AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.rv_listadoProductos)
         val layoutManager: LinearLayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
-        layoutManager.adapter = adapter
-
+        recyclerView.adapter = adapter
+        //layoutManager.adapter = adapter
 
         adapter.setOnClickListener({
             detalleProducto(listaProductos.get(recyclerView.getChildAdapterPosition(it)))

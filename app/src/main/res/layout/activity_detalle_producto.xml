@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/confirmacio"
     tools:context=".DetalleProducto">
 
     <!-- Toolbar con menú y logo -->
@@ -35,19 +36,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <!-- Barra de búsqueda -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:layout_margin="16dp"
-        app:startIconDrawable="@drawable/ic_search">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="       Buscar medicamentos" />
-    </com.google.android.material.textfield.TextInputLayout>
 
 
     <!-- Botón de retroceso -->
@@ -55,8 +44,7 @@
         android:id="@+id/back_button"
         android:layout_width="50dp"
         android:layout_height="60dp"
-        android:layout_below="@id/search_bar"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/toolbar"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Volver"
         android:src="@drawable/ic_back" />
@@ -64,10 +52,9 @@
     <!-- Imagen del medicamento -->
     <ImageView
         android:id="@+id/medicine_image"
-        android:layout_width="250dp"
-        android:layout_height="290dp"
+        android:layout_width="240dp"
+        android:layout_height="280dp"
         android:layout_below="@id/back_button"
-        android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/imgproducto" />
 
@@ -77,7 +64,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/medicine_image"
-        android:layout_marginTop="16dp"
         android:layout_marginHorizontal="16dp"
         android:background="@drawable/background_gradient"
         android:backgroundTint="#786ED3"
