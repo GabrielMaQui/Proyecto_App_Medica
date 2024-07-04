@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#00CFCF"
-    tools:context=".MainActivity">
+    android:background="@drawable/confirmacio"
+    android:id="@+id/main"
+    tools:context=".MenuInicialActivity">
 
     <ImageView
         android:id="@+id/some_id"

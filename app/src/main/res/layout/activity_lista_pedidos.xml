@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@drawable/confirmacio"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetalleProducto">
@@ -34,19 +35,6 @@
     </androidx.appcompat.widget.Toolbar>
 
     <!-- Barra de búsqueda -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:layout_margin="16dp"
-        app:startIconDrawable="@drawable/ic_search">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="       Buscar medicamentos" />
-    </com.google.android.material.textfield.TextInputLayout>
 
 
     <!-- Botón de retroceso -->
@@ -54,7 +42,7 @@
         android:id="@+id/back_button"
         android:layout_width="50dp"
         android:layout_height="60dp"
-        android:layout_below="@id/search_bar"
+        android:layout_below="@id/toolbar"
         android:layout_marginTop="10dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Volver"
@@ -64,9 +52,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/search_bar"
+        android:layout_below="@+id/back_button"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="101dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/lista_background"
@@ -122,7 +109,12 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_ir" />
+            android:src="@drawable/ic_cancel"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="center_vertical"
+            android:scaleX="1.5"
+            android:scaleY="1.5"/>
 
     </LinearLayout>
 

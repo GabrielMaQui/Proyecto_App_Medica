@@ -7,12 +7,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var IniciarSesion: Button
+    private lateinit var IniciarSesion: AppCompatButton
     private lateinit var Registrate: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,11 +28,13 @@ class MainActivity : AppCompatActivity() {
         IniciarSesion = findViewById(R.id.btn_iniciar_sesion)
         IniciarSesion.setOnClickListener {
             val menu = Intent(this, MenuInicialActivity::class.java)
+            startActivity(menu)
         }
 
         Registrate = findViewById(R.id.tv_registrate)
         Registrate.setOnClickListener {
-            val menu = Intent(this, MenuInicialActivity::class.java)
+            val registro = Intent(this, RegistrarCuentaActivity::class.java)
+            startActivity(registro)
         }
     }
 

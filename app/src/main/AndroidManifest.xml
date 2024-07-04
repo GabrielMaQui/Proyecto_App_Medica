@@ -14,7 +14,7 @@
         tools:targetApi="31">
         <activity
             android:name=".ListaPedidos"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ComprasLista"
             android:exported="true">
@@ -23,6 +23,14 @@
         <activity
             android:name=".DetalleProducto"
             android:exported="true">
+        </activity>
+        <activity
+            android:name=".CategoriaActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,9 +38,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".MenuInicialActivity"
             android:exported="true">
-
+        </activity>
+        <activity
+            android:name=".RegistrarCuentaActivity"
+            android:exported="true">
         </activity>
 
         <meta-data

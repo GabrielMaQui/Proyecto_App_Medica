@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
 class CategoriaActivity: AppCompatActivity() {
 
@@ -19,10 +21,24 @@ class CategoriaActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.list_categorias)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
-        binding()
+        enlazando()
 
         usandoVariables()
+    }
+
+    private fun enlazando() {
+        AseoPersonal = findViewById(R.id.iv_aseoPersonal)
+        Medicamentos = findViewById(R.id.iv_medicamentos)
+        Belleza = findViewById(R.id.iv_belleza)
+        ProductosMaternos = findViewById(R.id.iv_productos_maternos)
+        PrimerosAuxilios = findViewById(R.id.iv_primeros_auxilios)
+        Nutricion = findViewById(R.id.iv_nutricion)
     }
 
     private fun usandoVariables() {
@@ -51,14 +67,4 @@ class CategoriaActivity: AppCompatActivity() {
             startActivity(list)
         }
     }
-
-    private fun binding() {
-        AseoPersonal = findViewById(R.id.iv_aseoPersonal)
-        Medicamentos = findViewById(R.id.iv_aseoPersonal)
-        Belleza = findViewById(R.id.iv_aseoPersonal)
-        ProductosMaternos = findViewById(R.id.iv_aseoPersonal)
-        PrimerosAuxilios = findViewById(R.id.iv_aseoPersonal)
-        Nutricion = findViewById(R.id.iv_aseoPersonal)
-    }
-
 }

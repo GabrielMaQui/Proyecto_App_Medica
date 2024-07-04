@@ -21,7 +21,7 @@ class RegistrarCuentaActivity: AppCompatActivity() {
         CrearCuenta = findViewById(R.id.btn_crear_cuenta)
         CrearCuenta.setOnClickListener {
             Toast.makeText(this, "Cuenta Creada con éxito",Toast.LENGTH_LONG).show()
-            val iniciar = Intent(this, MenuInicialActivity::class.java)
+            val iniciar = Intent(this, MainActivity::class.java)
             startActivity(iniciar)
         }
 

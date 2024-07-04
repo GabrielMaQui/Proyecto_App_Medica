@@ -3,6 +3,7 @@ package com.cibertec.proyecto_app_medica
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -19,6 +20,8 @@ class ListaProductosActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.list_productos)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -35,7 +38,8 @@ class ListaProductosActivity: AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.rv_listadoProductos)
         val layoutManager: LinearLayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
-        layoutManager.adapter = adapter
+        recyclerView.adapter = adapter
+        //layoutManager.adapter = adapter
 
 
         adapter.setOnClickListener({

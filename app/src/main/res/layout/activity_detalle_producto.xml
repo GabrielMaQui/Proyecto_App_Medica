@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetalleProducto">
+    tools:context=".DetalleProducto"
+    android:background="@drawable/confirmacio">
 
     <!-- Toolbar con menú y logo -->
     <androidx.appcompat.widget.Toolbar

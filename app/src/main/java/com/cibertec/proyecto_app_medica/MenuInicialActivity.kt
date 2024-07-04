@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
 class MenuInicialActivity: AppCompatActivity() {
 
@@ -14,10 +16,15 @@ class MenuInicialActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.menu_inicial)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         VerProductos = findViewById(R.id.btn_ver_productos)
         VerProductos.setOnClickListener {
-            val iniciar = Intent(this, ListaProductosActivity::class.java)
+            val iniciar = Intent(this, CategoriaActivity::class.java)
             startActivity(iniciar)
         }
 
