@@ -3,8 +3,10 @@ package com.cibertec.proyecto_app_medica
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,6 +20,11 @@ class ListaProductosActivity: AppCompatActivity() {
     private lateinit var adapter: ProductoAdapter
     private lateinit var listaProductos: ArrayList<Producto>
 
+    private lateinit var backButton: ImageButton
+    private lateinit var producto: CardView
+
+    private lateinit var pedidos: ImageButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,15 +34,33 @@ class ListaProductosActivity: AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        pedidos = findViewById(R.id.btn_orders)
+        pedidos.setOnClickListener {
+            val pedidos = Intent(this, ListaPedidos::class.java)
+            startActivity(pedidos)
+        }
+
         Volver = findViewById(R.id.btn_volver)
         Volver.setOnClickListener {
-            val volver = Intent(this, MenuInicialActivity::class.java)
+            val volver = Intent(this, CategoriaActivity::class.java)
             startActivity(volver)
+        }
+
+        backButton = findViewById(R.id.back_button)
+        backButton.setOnClickListener {
+            val volver = Intent(this, CategoriaActivity::class.java)
+            startActivity(volver)
+        }
+
+        producto = findViewById(R.id.cv_producto)
+        producto.setOnClickListener {
+            val detalle = Intent(this, DetalleProducto::class.java)
+            startActivity(detalle)
         }
 
         listaProductos = ArrayList<Producto>();
         adapter = ProductoAdapter(listaProductos)
-        val recyclerView: RecyclerView = findViewById(R.id.rv_listadoProductos)
+        /*val recyclerView: RecyclerView = findViewById(R.id.rv_listadoProductos)
         val layoutManager: LinearLayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
@@ -46,7 +71,7 @@ class ListaProductosActivity: AppCompatActivity() {
             detalleProducto(listaProductos.get(recyclerView.getChildAdapterPosition(it)))
         })
 
-        adapter.notifyDataSetChanged()
+        adapter.notifyDataSetChanged()*/
     }
     private fun detalleProducto(producto: Producto) {
         val detalle: Intent
