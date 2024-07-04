@@ -18,6 +18,8 @@ class CategoriaActivity: AppCompatActivity() {
     private lateinit var PrimerosAuxilios: ImageView
     private lateinit var Nutricion: ImageView
     private lateinit var pedidos: ImageButton
+    private lateinit var menuButton: ImageView
+    private lateinit var home: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,12 @@ class CategoriaActivity: AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        menuButton = findViewById(R.id.menu_button)
+        menuButton.setOnClickListener {
+            val menu = Intent(this, MenuDesplegableActivity::class.java)
+            startActivity(menu)
         }
 
         pedidos = findViewById(R.id.btn_orders)
@@ -69,6 +77,12 @@ class CategoriaActivity: AppCompatActivity() {
         Nutricion.setOnClickListener {
             val list = Intent(this, ListaProductosActivity::class.java)
             startActivity(list)
+        }
+
+        home = findViewById(R.id.btn_home)
+        home.setOnClickListener {
+            val home = Intent(this, MenuInicialActivity::class.java)
+            startActivity(home)
         }
     }
 }

@@ -18,11 +18,18 @@ class ListaPedidos : AppCompatActivity() {
     private lateinit var backButton: ImageButton
     private lateinit var volver: Button
     private lateinit var cancelar: ImageView
+    private lateinit var menuButton: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_lista_pedidos)
+
+        menuButton = findViewById(R.id.menu_button)
+        menuButton.setOnClickListener {
+            val menu = Intent(this, MenuDesplegableActivity::class.java)
+            startActivity(menu)
+        }
 
         backButton = findViewById(R.id.back_button)
         backButton.setOnClickListener {
