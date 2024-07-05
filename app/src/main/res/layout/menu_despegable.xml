@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/confirmacio"
-    tools:context=".MainActivity">
+    tools:context=".MenuDesplegableActivity">
 
     <TextView
         android:id="@+id/medi_app"
